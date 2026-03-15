@@ -44,8 +44,8 @@ nav:
   - Usage: usage.md
   - API Reference: api.md
   - Notebooks:
-    - Getting Started: notebooks/01_getting_started.md
-    - Visualization: notebooks/02_visualization.md
+    - Getting Started: notebooks/01_getting_started.ipynb
+    - Visualization: notebooks/02_visualization.ipynb
   - Development: development.md
   - Publishing: publishing.md
 
@@ -65,6 +65,9 @@ markdown_extensions:
 
 plugins:
   - search
+  - mkdocs-jupyter:
+      execute: false
+      include_source: true
 
 extra:
   social:
