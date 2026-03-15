@@ -13,8 +13,10 @@
       
       
       
-        <link rel="prev" href="../development/">
+        <link rel="prev" href="../usage/">
       
+      
+        <link rel="next" href="../development/">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Publishing - SNBB Atlas Pack</title>
+        <title>API Reference - SNBB Atlas Pack</title>
       
     
     
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#publishing-to-datalad" class="md-skip">
+        <a href="#api-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Publishing
+              API Reference
             
           </span>
         </div>
@@ -278,9 +280,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../api/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -316,11 +320,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../publishing/" class="md-tabs__link">
         
   
   
@@ -638,10 +640,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -657,6 +686,126 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#atlas-fetcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atlas fetcher
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas fetcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list_atlases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        list_atlases()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_atlasatlas_id-heminone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_atlas(atlas_id, hemi=None)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atlasresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AtlasResult
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-fetcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesh fetcher
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mesh fetcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list_meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        list_meshes()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_meshatlas_id-componentsubcortical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_mesh(atlas_id, component="subcortical")
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build_meshesatlas_idnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        build_meshes(atlas_id=None)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -692,37 +841,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Publishing
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../publishing/" class="md-nav__link">
         
   
   
@@ -738,81 +860,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-commit-current-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Commit Current State
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-create-a-github-sibling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Create a GitHub Sibling
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-store-annexed-binary-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Store Annexed (Binary) Files
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-verify" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Verify
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#for-users-after-publishing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        For Users After Publishing
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -837,64 +884,222 @@
   
 
 
-<h1 id="publishing-to-datalad">Publishing to DataLad<a class="headerlink" href="#publishing-to-datalad" title="Permanent link">&para;</a></h1>
-<p>This dataset is already a DataLad dataset (see <code>.datalad/config</code>). The steps below make it publicly accessible so others can <code>datalad clone</code> and <code>datalad get</code> individual atlases.</p>
-<h2 id="1-commit-current-state">1. Commit Current State<a class="headerlink" href="#1-commit-current-state" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>datalad<span class="w"> </span>save<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial atlas pack build&quot;</span>
+<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
+<p>The <code>snbb_atlas_pack</code> package provides a programmatic interface for accessing the SNBB Atlas Pack from Python, modelled on the <a href="https://www.templateflow.org/">templateflow</a> / <a href="https://nilearn.github.io/">nilearn</a> fetcher pattern.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">snbb_atlas_pack</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">snbb</span>
 </code></pre></div>
-<h2 id="2-create-a-github-sibling">2. Create a GitHub Sibling<a class="headerlink" href="#2-create-a-github-sibling" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Requires a GitHub personal access token</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>datalad<span class="w"> </span>create-sibling-github<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>--dataset<span class="w"> </span>.<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span>--name<span class="w"> </span>github<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span>--github-organization<span class="w"> </span>&lt;your-org-or-username&gt;<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span>snbb-atlas-pack
+<hr />
+<h2 id="atlas-fetcher">Atlas fetcher<a class="headerlink" href="#atlas-fetcher" title="Permanent link">&para;</a></h2>
+<h3 id="list_atlases"><code>list_atlases()</code><a class="headerlink" href="#list_atlases" title="Permanent link">&para;</a></h3>
+<p>Return a sorted list of all available atlas IDs.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">snbb</span><span class="o">.</span><span class="n">list_atlases</span><span class="p">()</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># [&#39;HCPMMP&#39;, &#39;HCPex&#39;, &#39;Schaefer2018N1000n7Tian2020S1&#39;, ..., &#39;TianS4&#39;]</span>
 </code></pre></div>
-<h2 id="3-store-annexed-binary-files">3. Store Annexed (Binary) Files<a class="headerlink" href="#3-store-annexed-binary-files" title="Permanent link">&para;</a></h2>
-<p>NIfTI/GIFTI files are annexed — they are not stored in git. Choose one option:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">RIA Store (recommended for institutional storage)</label><label for="__tabbed_1_2">GitHub git-annex remote (smaller datasets)</label><label for="__tabbed_1_3">OSF (Open Science Framework)</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>datalad<span class="w"> </span>create-sibling-ria<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>--dataset<span class="w"> </span>.<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span>--name<span class="w"> </span>ria<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="s2">&quot;ria+ssh://hostname/path/to/ria-store&quot;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>datalad<span class="w"> </span>push<span class="w"> </span>--to<span class="w"> </span>ria<span class="w">      </span><span class="c1"># push annexed data</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>datalad<span class="w"> </span>push<span class="w"> </span>--to<span class="w"> </span>github<span class="w">   </span><span class="c1"># push metadata + scripts</span>
+<p><strong>Returns:</strong> <code>list[str]</code></p>
+<hr />
+<h3 id="get_atlasatlas_id-heminone"><code>get_atlas(atlas_id, hemi=None)</code><a class="headerlink" href="#get_atlasatlas_id-heminone" title="Permanent link">&para;</a></h3>
+<p>Fetch image path(s) and the region labels table for an atlas.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>atlas_id</code></td>
+<td><code>str</code></td>
+<td>Atlas identifier (from <code>list_atlases()</code>)</td>
+</tr>
+<tr>
+<td><code>hemi</code></td>
+<td><code>"L"</code> | <code>"R"</code> | <code>None</code></td>
+<td>Surface atlases only. <code>None</code> returns both hemispheres. Must be <code>None</code> for volumetric atlases.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="#atlasresult"><code>AtlasResult</code></a></p>
+<p><strong>Raises:</strong>
+- <code>KeyError</code> — unknown <code>atlas_id</code>
+- <code>ValueError</code> — <code>hemi</code> set for a volumetric atlas, or invalid value</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Volumetric atlas</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">atlas</span> <span class="o">=</span> <span class="n">snbb</span><span class="o">.</span><span class="n">get_atlas</span><span class="p">(</span><span class="s2">&quot;TianS1&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">atlas</span><span class="o">.</span><span class="n">maps</span>        <span class="c1"># Path to .nii.gz</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">atlas</span><span class="o">.</span><span class="n">maps_R</span>      <span class="c1"># None (volumetric)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">atlas</span><span class="o">.</span><span class="n">labels</span>      <span class="c1"># pd.DataFrame with index, label, name, hemisphere, …</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">atlas</span><span class="o">.</span><span class="n">space</span>       <span class="c1"># &#39;MNI152NLin2009cAsym&#39;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">atlas</span><span class="o">.</span><span class="n">modality</span>    <span class="c1"># &#39;volumetric&#39;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># Surface atlas — both hemispheres</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">hcpmmp</span> <span class="o">=</span> <span class="n">snbb</span><span class="o">.</span><span class="n">get_atlas</span><span class="p">(</span><span class="s2">&quot;HCPMMP&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">hcpmmp</span><span class="o">.</span><span class="n">maps</span>       <span class="c1"># Path to hemi-L .label.gii</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">hcpmmp</span><span class="o">.</span><span class="n">maps_R</span>     <span class="c1"># Path to hemi-R .label.gii</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="c1"># Surface atlas — single hemisphere</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">lh</span> <span class="o">=</span> <span class="n">snbb</span><span class="o">.</span><span class="n">get_atlas</span><span class="p">(</span><span class="s2">&quot;HCPMMP&quot;</span><span class="p">,</span> <span class="n">hemi</span><span class="o">=</span><span class="s2">&quot;L&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">lh</span><span class="o">.</span><span class="n">maps</span>           <span class="c1"># Path to hemi-L .label.gii</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">lh</span><span class="o">.</span><span class="n">maps_R</span>         <span class="c1"># None</span>
 </code></pre></div>
+<hr />
+<h3 id="atlasresult"><code>AtlasResult</code><a class="headerlink" href="#atlasresult" title="Permanent link">&para;</a></h3>
+<p>Dataclass returned by <code>get_atlas()</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>atlas_id</code></td>
+<td><code>str</code></td>
+<td>Atlas identifier</td>
+</tr>
+<tr>
+<td><code>maps</code></td>
+<td><code>Path</code></td>
+<td>NIfTI path (volumetric) or LH GIFTI path (surface)</td>
+</tr>
+<tr>
+<td><code>maps_R</code></td>
+<td><code>Path \| None</code></td>
+<td>RH GIFTI path for surface atlases; <code>None</code> otherwise</td>
+</tr>
+<tr>
+<td><code>labels</code></td>
+<td><code>pd.DataFrame</code></td>
+<td>Contents of <code>*_dseg.tsv</code></td>
+</tr>
+<tr>
+<td><code>space</code></td>
+<td><code>str</code></td>
+<td>Template space name</td>
+</tr>
+<tr>
+<td><code>modality</code></td>
+<td><code>str</code></td>
+<td><code>"volumetric"</code> or <code>"surface"</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>maps</code> is always a <code>Path</code> object — callers load images themselves:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">nibabel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nib</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">atlas</span> <span class="o">=</span> <span class="n">snbb</span><span class="o">.</span><span class="n">get_atlas</span><span class="p">(</span><span class="s2">&quot;TianS1&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">img</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">atlas</span><span class="o">.</span><span class="n">maps</span><span class="p">)</span>        <span class="c1"># NIfTI image</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span>            <span class="c1"># numpy array</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">gifti</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">hcpmmp</span><span class="o">.</span><span class="n">maps</span><span class="p">)</span>    <span class="c1"># GIFTI image</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">labels</span> <span class="o">=</span> <span class="n">gifti</span><span class="o">.</span><span class="n">darrays</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>   <span class="c1"># vertex label array</span>
+</code></pre></div>
+<hr />
+<h2 id="mesh-fetcher">Mesh fetcher<a class="headerlink" href="#mesh-fetcher" title="Permanent link">&para;</a></h2>
+<p>Mesh fetchers return paths to the prebuilt <a href="https://github.com/GalKepler/yabplot">yabplot</a> mesh directories under <code>derivatives/yabplot/</code>. These paths are passed directly to <code>yab.plot_subcortical()</code> or <code>yab.plot_cortical()</code>.</p>
+<h3 id="list_meshes"><code>list_meshes()</code><a class="headerlink" href="#list_meshes" title="Permanent link">&para;</a></h3>
+<p>Return a mapping of atlas IDs to their already-built mesh components.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">snbb</span><span class="o">.</span><span class="n">list_meshes</span><span class="p">()</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># {&#39;HCPex&#39;: [&#39;subcortical&#39;, &#39;cortical&#39;], &#39;TianS1&#39;: [&#39;subcortical&#39;], …}</span>
+</code></pre></div>
+<p><strong>Returns:</strong> <code>dict[str, list[str]]</code> — only includes atlases with at least one built component.</p>
+<hr />
+<h3 id="get_meshatlas_id-componentsubcortical"><code>get_mesh(atlas_id, component="subcortical")</code><a class="headerlink" href="#get_meshatlas_id-componentsubcortical" title="Permanent link">&para;</a></h3>
+<p>Return the path to a prebuilt yabplot mesh directory.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>atlas_id</code></td>
+<td><code>str</code></td>
+<td>—</td>
+<td>Atlas identifier</td>
+</tr>
+<tr>
+<td><code>component</code></td>
+<td><code>"subcortical"</code> | <code>"cortical"</code></td>
+<td><code>"subcortical"</code></td>
+<td>Which mesh component to retrieve</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <code>Path</code></p>
+<p><strong>Raises:</strong>
+- <code>KeyError</code> — unknown <code>atlas_id</code>
+- <code>FileNotFoundError</code> — mesh not yet built (call <code>build_meshes()</code> first)</p>
+<div class="admonition note">
+<p class="admonition-title">Schaefer+Tian subcortical mesh reuse</p>
+<p>All 40 Schaefer+TianS{N} atlases share their subcortical meshes with the
+corresponding standalone Tian atlas. <code>get_mesh("Schaefer2018N400n7Tian2020S2", "subcortical")</code>
+returns the same directory as <code>get_mesh("TianS2")</code>.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>annex<span class="w"> </span>initremote<span class="w"> </span>github-annex<span class="w"> </span><span class="nv">type</span><span class="o">=</span>git<span class="w"> </span><span class="nv">url</span><span class="o">=</span>&lt;github-url&gt;
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>datalad<span class="w"> </span>push<span class="w"> </span>--to<span class="w"> </span>github
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">yabplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">yab</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Subcortical plot</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">mesh_dir</span> <span class="o">=</span> <span class="n">snbb</span><span class="o">.</span><span class="n">get_mesh</span><span class="p">(</span><span class="s2">&quot;TianS1&quot;</span><span class="p">,</span> <span class="n">component</span><span class="o">=</span><span class="s2">&quot;subcortical&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">atlas</span> <span class="o">=</span> <span class="n">snbb</span><span class="o">.</span><span class="n">get_atlas</span><span class="p">(</span><span class="s2">&quot;TianS1&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">atlas</span><span class="o">.</span><span class="n">labels</span><span class="p">))</span>   <span class="c1"># one value per region</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">yab</span><span class="o">.</span><span class="n">plot_subcortical</span><span class="p">(</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="n">custom_atlas_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">mesh_dir</span><span class="p">),</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="n">export_path</span><span class="o">=</span><span class="s2">&quot;figure.png&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="n">display_type</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">)</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="c1"># Cortical plot (HCPex)</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="n">mesh_dir</span> <span class="o">=</span> <span class="n">snbb</span><span class="o">.</span><span class="n">get_mesh</span><span class="p">(</span><span class="s2">&quot;HCPex&quot;</span><span class="p">,</span> <span class="n">component</span><span class="o">=</span><span class="s2">&quot;cortical&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="n">yab</span><span class="o">.</span><span class="n">plot_cortical</span><span class="p">(</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    <span class="n">custom_atlas_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">mesh_dir</span><span class="p">),</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    <span class="n">export_path</span><span class="o">=</span><span class="s2">&quot;figure.png&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    <span class="n">display_type</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="p">)</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>datalad-osf
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>datalad<span class="w"> </span>create-sibling-osf<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>--dataset<span class="w"> </span>.<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span>--name<span class="w"> </span>osf<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span>--title<span class="w"> </span><span class="s2">&quot;SNBB Atlas Pack&quot;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>datalad<span class="w"> </span>push<span class="w"> </span>--to<span class="w"> </span>osf
+<hr />
+<h3 id="build_meshesatlas_idnone"><code>build_meshes(atlas_id=None)</code><a class="headerlink" href="#build_meshesatlas_idnone" title="Permanent link">&para;</a></h3>
+<p>Build the yabplot mesh cache for one or all atlases. Wraps
+<code>scripts/visualize_atlases.py</code> and handles the working-directory requirement.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>atlas_id</code></td>
+<td><code>str \| None</code></td>
+<td><code>None</code></td>
+<td>Build this atlas only. <code>None</code> builds all 46 atlases.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Build a single atlas</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">snbb</span><span class="o">.</span><span class="n">build_meshes</span><span class="p">(</span><span class="s2">&quot;TianS1&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Build everything (slow — runs yabplot for all 46 atlases)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">snbb</span><span class="o">.</span><span class="n">build_meshes</span><span class="p">()</span>
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Requires a display or off-screen renderer</p>
+<p><code>build_meshes()</code> uses VTK/yabplot internally. On headless servers, ensure
+VTK is configured for off-screen rendering (the build script handles this
+automatically via a monkey-patch).</p>
 </div>
-</div>
-</div>
-<h2 id="4-verify">4. Verify<a class="headerlink" href="#4-verify" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>datalad<span class="w"> </span>status<span class="w">          </span><span class="c1"># should be clean</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>-5<span class="w">    </span><span class="c1"># confirm commits</span>
-</code></pre></div>
-<h2 id="for-users-after-publishing">For Users After Publishing<a class="headerlink" href="#for-users-after-publishing" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Clone the dataset (metadata only, no large files)</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>datalad<span class="w"> </span>clone<span class="w"> </span>https://github.com/&lt;org&gt;/snbb-atlas-pack
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">cd</span><span class="w"> </span>snbb-atlas-pack
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1"># Download a specific atlas</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>datalad<span class="w"> </span>get<span class="w"> </span>atlases/atlas-TianS1/
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1"># Download all atlases (~several GB)</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>datalad<span class="w"> </span>get<span class="w"> </span>atlases/
-</code></pre></div>
 
 
 
