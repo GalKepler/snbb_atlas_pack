@@ -43,6 +43,9 @@ nav:
     - Schaefer2018 + Tian (Combined): atlases/schaefer_tian.md
   - Usage: usage.md
   - API Reference: api.md
+  - Notebooks:
+    - Getting Started: notebooks/01_getting_started.md
+    - Visualization: notebooks/02_visualization.md
   - Development: development.md
   - Publishing: publishing.md
 

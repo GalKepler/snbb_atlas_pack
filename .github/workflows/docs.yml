@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "docs/**"
+      - "notebooks/**"
       - "mkdocs.yml"
       - "pyproject.toml"
   workflow_dispatch:
@@ -19,14 +20,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # full history needed for mkdocs git-revision-date plugin
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
 
       - name: Install docs dependencies
-        run: pip install -e ".[docs]"
+        run: uv sync --extra docs
+
+      - name: Convert notebooks to Markdown
+        run: |
+          uv run jupyter nbconvert \
+            --to markdown \
+            --output-dir docs/notebooks \
+            notebooks/01_getting_started.ipynb \
+            notebooks/02_visualization.ipynb
 
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+        run: uv run mkdocs gh-deploy --force
