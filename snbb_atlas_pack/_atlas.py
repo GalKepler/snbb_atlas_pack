@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Literal
 
@@ -14,9 +14,13 @@ class AtlasResult:
     atlas_id: str
     maps: Path
     maps_R: Path | None
-    labels: pd.DataFrame
     space: str
     modality: str
+    _tsv_path: Path = field(repr=False)
+
+    @property
+    def labels(self) -> pd.DataFrame:
+        return pd.read_csv(self._tsv_path, sep="\t")
 
 
 def get_atlas(
@@ -69,15 +73,14 @@ def get_atlas(
             raise ValueError(f"hemi must be 'L', 'R', or None, got {hemi!r}.")
 
     tsv_path = atlas_dir / f"{meta.dir_name}_dseg.tsv"
-    labels = pd.read_csv(tsv_path, sep="\t")
 
     return AtlasResult(
         atlas_id=atlas_id,
         maps=maps,
         maps_R=maps_R,
-        labels=labels,
         space=meta.space,
         modality=meta.modality,
+        _tsv_path=tsv_path,
     )
 
 
