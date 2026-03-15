@@ -1,1 +1,13 @@
-../.git/annex/objects/20/J3/MD5E-s308--16c62dd88e5a3275336a03aca4f3e5b2.py/MD5E-s308--16c62dd88e5a3275336a03aca4f3e5b2.py
+from pathlib import Path
+
+import pandas as pd
+
+
+def ensure_atlas_dir(base: Path, atlas_name: str) -> Path:
+    d = base / "atlases" / f"atlas-{atlas_name}"
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def write_tsv(df: pd.DataFrame, path: Path) -> None:
+    df.to_csv(path, sep="\t", index=False)

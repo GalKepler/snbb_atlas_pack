@@ -1,1 +1,66 @@
-.git/annex/objects/F4/Zp/MD5E-s1576--1c9b8ae50d4a0267c68068fdf846fda6.yml/MD5E-s1576--1c9b8ae50d4a0267c68068fdf846fda6.yml
+site_name: SNBB Atlas Pack
+site_description: BIDS-compatible brain parcellation atlas pack for the Strauss Neuroplasticity Brain Bank
+site_author: Gal Kepler
+repo_url: https://github.com/GalKepler/snbb-atlas-pack
+repo_name: GalKepler/snbb-atlas-pack
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Atlases:
+    - Overview: atlases/index.md
+    - Tian Melbourne Subcortex (S1–S4): atlases/tian.md
+    - HCPex (Cortex + Subcortex): atlases/hcpex.md
+    - HCP-MMP (Surface): atlases/hcpmmp.md
+    - Schaefer2018 + Tian (Combined): atlases/schaefer_tian.md
+  - Usage: usage.md
+  - Development: development.md
+  - Publishing: publishing.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/GalKepler/snbb-atlas-pack

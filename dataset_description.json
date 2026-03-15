@@ -1,1 +1,24 @@
-.git/annex/objects/0P/Qw/MD5E-s924--6896bec0a6c0947a9ca75595c9791939.json/MD5E-s924--6896bec0a6c0947a9ca75595c9791939.json
+{
+  "Name": "SNBB Atlas Pack",
+  "BIDSVersion": "1.9.0",
+  "DatasetType": "atlas",
+  "License": "CC-BY-4.0",
+  "Authors": [
+    "Gal Kepler"
+  ],
+  "HowToAcknowledge": "Please cite the original atlas publications listed in ReferencesAndLinks.",
+  "ReferencesAndLinks": [
+    "Tian et al. 2020 - Nat Neurosci - https://doi.org/10.1038/s41593-020-00711-6",
+    "Glasser et al. 2016 - Nature - https://doi.org/10.1038/nature18933",
+    "Huang et al. 2022 - NeuroImage - HCPex (https://doi.org/10.1016/j.neuroimage.2022.119385)",
+    "Schaefer et al. 2018 - Cereb Cortex - https://doi.org/10.1093/cercor/bhx179"
+  ],
+  "GeneratedBy": [
+    {
+      "Name": "snbb-atlas-pack",
+      "Version": "0.1.0",
+      "Description": "Custom build pipeline that assembles BIDS-compatible atlas directories from source NIfTI/CIFTI/GIFTI files and look-up tables.",
+      "CodeURL": "https://github.com/GalKepler/snbb-atlas-pack"
+    }
+  ]
+}

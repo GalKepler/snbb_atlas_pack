@@ -1,1 +1,22 @@
-.git/annex/objects/4Z/1f/MD5E-s494--b6efc0434ecee31800f4f501fb9b3b8e.toml/MD5E-s494--b6efc0434ecee31800f4f501fb9b3b8e.toml
+[project]
+name = "snbb-atlas-pack"
+version = "0.1.0"
+description = "BIDS-compatible atlas pack for the Strauss Neuroplasticity Brain Bank (SNBB)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "nibabel>=5.4.2",
+    "nilearn>=0.13.1",
+    "numpy>=2.4.3",
+    "pandas>=3.0.1",
+    "setuptools>=82.0.1",
+    "templateflow>=25.1.2",
+    "yabplot>=0.2.2",
+]
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs>=1.6.0",
+    "mkdocs-material>=9.5.0",
+]
