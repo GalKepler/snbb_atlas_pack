@@ -46,7 +46,7 @@ uv run python scripts/visualize_atlases.py
 ## Repository Structure
 
 ```
-snbb_atlas_pack/
+snbb-atlas-pack/
 ├── main.py                        # Entry point: runs the full build
 ├── dataset_description.json       # BIDS dataset metadata
 ├── scripts/
